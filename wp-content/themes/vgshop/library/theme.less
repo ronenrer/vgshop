@@ -50,7 +50,6 @@
 @import "bootstrap/responsive-utilities.less";
 
 // Custom CSS
-@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
 .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
 	float:right;
 }
@@ -62,14 +61,16 @@
   	.alignleft{float:left;margin:0 20px 20px 0}
   	.alignright{float:right;margin:0 0 20px 20px}
  }
+ @media (min-width: @screen-md){
+	.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9{
+		float:right;
+	}
+	.col-md-push-5{right: 41.66666667%;left:auto}
+}
 .row.nomargin{margin:0;}
 
+body{background:url('../images/body_bg.png') repeat;}
 .navbar-wrapper{
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 20;
    @media (min-width: @grid-float-breakpoint){
    	margin-top:20px;
    	.navbar{border-radius:4px;}
@@ -117,12 +118,14 @@
 .embed-responsive{width:100%;height:100%;}
 .sidebar{padding:0}
 .carousel{
-	height: 500px;
+	height: 360px;
  	margin-bottom: 60px;
+ 	&#myCarousel{
+ 		background:url('../images/home_slider_bg.jpg')repeat-x;
+ 	}
 }
 .carousel-inner>.item{
-	background:#91ad60;
-	height:500px;
+	height:360px;
 	>img{
 		height:500px;
 	}
