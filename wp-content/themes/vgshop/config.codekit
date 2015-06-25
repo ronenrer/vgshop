@@ -1060,6 +1060,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/library\/images\/footer_bottom_bg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 98238,
+		"inputAbbreviatedPath": "\/library\/images\/footer_bottom_bg.jpg",
+		"outputAbbreviatedPath": "\/library\/images\/footer_bottom_bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/library\/images\/guide_ribbon.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1067,6 +1078,17 @@
 		"initialSize": 18062,
 		"inputAbbreviatedPath": "\/library\/images\/guide_ribbon.png",
 		"outputAbbreviatedPath": "\/library\/images\/guide_ribbon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/home.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8995,
+		"inputAbbreviatedPath": "\/library\/images\/home.png",
+		"outputAbbreviatedPath": "\/library\/images\/home.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1089,6 +1111,28 @@
 		"initialSize": 5503,
 		"inputAbbreviatedPath": "\/library\/images\/homeBox_ribbon.png",
 		"outputAbbreviatedPath": "\/library\/images\/homeBox_ribbon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11228,
+		"inputAbbreviatedPath": "\/library\/images\/logo.png",
+		"outputAbbreviatedPath": "\/library\/images\/logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/slide1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 121648,
+		"inputAbbreviatedPath": "\/library\/images\/slide1.png",
+		"outputAbbreviatedPath": "\/library\/images\/slide1.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

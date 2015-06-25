@@ -12,10 +12,12 @@ Template Name: Homepage
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
-      <div class="row">
+      <div class="row main-features">
         <div class="col-md-3">
-          <img class="img-circle" src="http://www.vgshop.co.il/wp-content/uploads/2012/10/circle_feature_2.jpg" alt="Generic placeholder image" width="189" height="189">
-          <h2>איך משתמשים</h2>
+          <div class="img-box">
+            <img class="img-circle" src="http://www.vgshop.co.il/wp-content/uploads/2012/10/circle_feature_2.jpg" alt="Generic placeholder image" width="189" height="189">
+            <h2>איך משתמשים</h2>
+          </div>
           <p>מקטרת האידוי (Vaporizer) המקורית עכשיו בישראל. מה זה אידוי קנאביס רפואי ולמה אתם חייבים אחת.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
@@ -61,25 +63,11 @@ Template Name: Homepage
           <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
-        <div class="col-md-5 col-md-pull-7">
+        <div class="col-md-5 col-md-pull-5">
           <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
-
+</div>
 <?php get_footer(); ?>
