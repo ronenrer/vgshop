@@ -3,30 +3,30 @@
 				<div id="inner-footer" class="container clearfix">
 					<div class="row">
 						<div class="col-xs-6 col-sm-4 contact-info">
-							<?php dynamic_sidebar( 'footer1' ); ?>
+							<h3>על הוופורייזר <span>בקצרה</span></h3>
+							<p><?php echo get_field('about_short',option) ?></p>
+							<a class="more" href="<?php echo get_field('about_link',option) ?>">קרא עוד &larr;</a>
+
 						</div>
-						<div class="col-xs-6 col-sm-4">
+						<div class="col-xs-6 col-sm-2">
+							<h3>עמודים <span>נבחרים</span></h3>
 							<nav role="navigation">
-								<?php 
-								wp_nav_menu( array(
-									'menu'              => 'footer-nav',
-									'theme_location'    => 'footer-links',
-									'depth'             => 2,
-									'container'         => 'div',
-									'container_id'   	=>	'navbar' ,
-									'container_class'   => '',
-									'menu_class'        => 'nav nav-justified',
-									'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-									'walker'            => new wp_bootstrap_navwalker())
-								);
-							?>
+								<?php bones_footer_links()?>
 							</nav>
 						</div>
+						<div class="col-xs-6 col-sm-3 contact-details">
+							<h3>פרטי <span>יצירת קשר</span></h3>
+							<?php 
+								$site_email = get_field('site_email',option);
+								$site_phone = get_field('site_phone',option);
+								if (!empty($site_email))
+									echo '<li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:'.$site_email.'">'.$site_email.'</a></li>';
+								if (!empty($site_phone))
+									echo '<li><span class="glyphicon glyphicon-phone"></span><a href="tel:'.$site_phone.'">'.$site_phone.'</a></li>';
+								?>
 						</div>
-						<div class="col-xs-6 col-sm-4">
-							<?php dynamic_sidebar( 'footer3' ); ?>
-						</div>
-						<div class="col-xs-6 col-sm-4">
+						<div class="col-xs-6 col-sm-3">
+							<h3>תשלום  <span>מאובטח</span></h3>
 							<?php dynamic_sidebar( 'footer4' ); ?>
 						</div>
 					</div>				

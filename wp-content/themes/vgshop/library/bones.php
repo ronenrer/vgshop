@@ -131,6 +131,7 @@ function bones_scripts_and_styles() {
 	
 		// register main stylesheet
 		wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/theme.css', array(), '', 'all' );
+		wp_register_style( 'woocommerce', get_stylesheet_directory_uri() . '/library/css/woocommerce.css', array(), '' );
 
 		// ie-only style sheet
 		wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
@@ -147,6 +148,7 @@ function bones_scripts_and_styles() {
 		// wp_enqueue_script( 'bones-modernizr' );
 		wp_enqueue_style( 'bootstrap-stylesheet' );
 		wp_enqueue_style( 'bones-stylesheet' );
+		wp_enqueue_style( 'woocommerce' );
 		// wp_enqueue_style( 'bones-ie-only' );
 
 		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
@@ -227,19 +229,20 @@ MENUS & NAVIGATION
 // the main menu
 function bones_main_nav() {
 	// display the wp3 menu if available
-	wp_nav_menu(array(
-		'container' => false,                           // remove nav container
-		'container_class' => 'menu clearfix',           // class of container (should you choose to use it)
+	wp_nav_menu( array(
+		'container_class' => 'navbar-collapse collapse clearfix',  // class of container (should you choose to use it)
+		'container_id' => 'navbar',	
 		'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-		'menu_class' => 'nav top-nav clearfix',         // adding custom nav class
+		'menu_class' => 'nav navbar-nav',        		 // adding custom nav class
 		'theme_location' => 'main-nav',                 // where it's located in the theme
-		'before' => '',                                 // before the menu
-		'after' => '',                                  // after the menu
-		'link_before' => '',                            // before each link
-		'link_after' => '',                             // after each link
-		'depth' => 0,                                   // limit the depth of the nav
-		'fallback_cb' => 'bones_main_nav_fallback'      // fallback function
-	));
+		'depth'             => 2,
+		'container'         => 'div',
+		'container_id'   	=>	'navbar' ,
+		'container_class'   => 'navbar-collapse collapse clearfix',
+		'menu_class'        => 'nav navbar-nav',
+		'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+		'walker'            => new wp_bootstrap_navwalker())
+	);
 } /* end bones main nav */
 
 // the footer menu (should you choose to use one)
@@ -264,7 +267,7 @@ function bones_footer_links() {
 function bones_main_nav_fallback() {
 	wp_page_menu( array(
 		'show_home' => true,
-		'menu_class' => 'nav top-nav clearfix',      // adding custom nav class
+		'menu_class' => 'nav main-nav clearfix',      // adding custom nav class
 		'include'     => '',
 		'exclude'     => '',
 		'echo'        => true,

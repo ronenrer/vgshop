@@ -58,19 +58,7 @@
               </button>
               <a class="navbar-brand" href="#"><img src="<?php echo get_stylesheet_directory_uri()?>/library/images/logo.png"/></a>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">חנות</a></li>
-                <li><a href="#about">הוופורייזר</a></li>
-                <li><a href="#contact">מהו אידוי?</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">שאלות נפוצות</a>
-                </li>
-                 <li><a href="#contact">איך משתמשים</a></li>
-                  <li><a href="#contact">עמוד בית</a></li>
-                  <li><a href="#contact">יצירת קשר</a></li>
-              </ul>
-            </div>
+             <?php bones_main_nav();?>
           </div>
         </nav>
       </div>

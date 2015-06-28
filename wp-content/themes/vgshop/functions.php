@@ -88,33 +88,6 @@ function bones_register_sidebars() {
 	 ));
 
 	register_sidebar(array(
-		'id' => 'footer1',
-		'name' => __( 'Footer Column  1', 'bonestheme' ),
-		'description' => __( 'Footer Column 1 Widgets.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-	register_sidebar(array(
-		'id' => 'footer2',
-		'name' => __( 'Footer Column  2', 'bonestheme' ),
-		'description' => __( 'Footer Column 2 Widgets.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-	register_sidebar(array(
-		'id' => 'footer3',
-		'name' => __( 'Footer Column  3', 'bonestheme' ),
-		'description' => __( 'Footer Column 3 Widgets.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-	register_sidebar(array(
 		'id' => 'footer4',
 		'name' => __( 'Footer Column  4', 'bonestheme' ),
 		'description' => __( 'Footer Column 4 Widgets.', 'bonestheme' ),
@@ -176,6 +149,24 @@ function bones_wpsearch($form) {
 	</form>';
 	return $form;
 } // don't remove this bracket!
+/* VIDEO CONTAINER*/
+function div_wrapper($content) {
+    // match any iframes
+    $pattern = '~<iframe.*</iframe>|<embed.*</embed>~';
+    preg_match_all($pattern, $content, $matches);
+
+    foreach ($matches[0] as $match) {
+        // wrap matched iframe with div
+        $wrappedframe = '<div class="embed-responsive embed-responsive-16by9">' . $match . '</div>';
+
+        //replace original iframe with new in content
+        $content = str_replace($match, $wrappedframe, $content);
+    }
+
+    return $content;    
+}
+add_filter('the_content', 'div_wrapper');
+add_filter('the_excerpt', 'div_wrapper');
 if( function_exists('acf_add_options_page') ) {
   
   acf_add_options_page(array(
@@ -186,6 +177,23 @@ if( function_exists('acf_add_options_page') ) {
     'redirect'    => false
   ));
     
+}
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+
+add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
+
+function my_theme_wrapper_start() {
+  echo '<div id="main" class="col-sm-9 clearfix" role="main">';
+}
+
+function my_theme_wrapper_end() {
+  echo '</div>';
+}
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
 }
 
 ?>
