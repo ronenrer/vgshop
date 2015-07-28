@@ -1,7 +1,7 @@
 // Core variables and mixins
+
 @import "variables.less";
 @import "bootstrap/mixins.less";
-@import "_typography.less";
 // Reset
 @import "bootstrap/normalize.less";
 @import "bootstrap/print.less";
@@ -70,7 +70,10 @@
 }
 .row.nomargin{margin:0;}
 
-body{background:url('../images/body_bg.png')  repeat;}
+body{
+	background:#f5f5f5;
+	font-family:@font-family-sans-serif;
+}
 .navbar-wrapper{
    @media (min-width: @grid-float-breakpoint){
    	margin:20px 0;
@@ -113,6 +116,7 @@ body{background:url('../images/body_bg.png')  repeat;}
 		}
 	a{
 	 	color:@navbar-default-link-color;
+	 	font-family:@font-family-sans-serif;
 	&:hover,&:focus{background:none;color:@brand-accent;}
 	}
 }
@@ -122,29 +126,28 @@ body{background:url('../images/body_bg.png')  repeat;}
 	img{max-width:100%;}
 }
 .carousel{
-	height: 410px;
+	height: 350px;
  	margin-bottom: 60px;
  	&#myCarousel{
  		margin-bottom: 0;
- 		background:url('../images/home_slider_bg.jpg')repeat-x;
+ 		background:@brand-dark url('../images/overlay.png') no-repeat center top;
  		.carousel-inner{
  			overflow-y: visible;
 	 		>.item{
 				height:410px;
 			}
-			img{
-					position: absolute;
-					bottom: 0;
-				}
  		}
- 		.container{position: relative;height:100%;}
- 		.carousel-caption{right:40%;bottom:100px}
- 		.carousel-control{height:360px}
+ 		.container{position: relative;height:100%;padding:20px 0}
+ 		.carousel-caption{position:static;text-shadow:none;padding-top:0;}
+ 		.carousel-control{
+ 			height:360px;
+ 			&.right,&.left{background: none}
+ 		}
  	}
 }
 
 img{max-width:100%;height:auto;}
-#inner-content{padding-top:40px;}
+#inner-content{padding:40px 0;}
 #main{
 	@media (min-width: @grid-float-breakpoint){
 		&.col-sm-9{padding-left:8%;}
@@ -157,14 +160,19 @@ img{max-width:100%;height:auto;}
 			position:relative;
 			width:216px;
 			text-align:center;
+			img{
+				border: 1px solid #AAA;
+  				padding: 4px;
+				}			
 			}
-		h2{
+		h3{
 			position:absolute;
 			width:100%;
 			top:50%;
 			.translate(0,-50%);
 			width:216px;
 			height:35px;
+			line-height:37px;
 			background: url('../images/homeBox_ribbon.png') no-repeat;
 			color:#fff;
 			margin:0;
@@ -200,17 +208,16 @@ FOOTER
 .footer{
 	background-color:#fff;
 	border-top:1px solid #ddd;
-	.box-shadow(0 -2px 10px rgba(0,0, 0, 0.1));
 	#inner-footer{
 		padding:20px;
 		#text-2 {
 		.textwidget{line-height:1.8em;}	
 	}
-	h3 span{color:@brand-accent}
+	a{color:@brand-light;}
+	h3 span{color:@brand-accent-light}
 	.social{
 		a{
 			background:rgba(0,0,0,0.7);
-			color:@brand-light;
 			padding:5px;
 			display:inline-block;
 			border-radius:5px;
@@ -232,14 +239,14 @@ FOOTER
 			margin-bottom:5px;
 			border-bottom:1px dashed @gray-lighter;
 			padding-bottom:5px; 
-			> a{padding:0}
+			> a{padding:0;}
 		}
 	}
 
 }
 
 .bottom-footer{
-	background:url('../images/footer_bottom_bg.jpg') no-repeat;
+	background:darken(@brand-primary,10%);
 	background-size: cover;
 	font-size:@font-size-small;
 	color:#fff;
@@ -248,6 +255,25 @@ FOOTER
 	line-height:40px;
 	p{margin-bottom:0;}
 	a{color:#fff}
+}
+
+
+/*******************
+HOMEPAGE
+********************/
+.home #inner-content{padding-top:0;}
+.home .jumbotron{
+	width:75%;
+	margin: 0 auto 40px;
+}
+.featurette-divider{margin-bottom:40px;}
+.featurette-heading{
+	margin-top:0;margin-bottom:5px;
+	.text-muted{color:@brand-accent}
+}
+.featurette .lead{margin-bottom:0}
+@media (min-width: @grid-float-breakpoint){
+	.lead{font-size:18px;}
 }
 /*******************
 Pages

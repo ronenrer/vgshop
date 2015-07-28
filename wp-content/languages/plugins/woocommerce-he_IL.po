@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
-"POT-Creation-Date: 2015-06-10 17:29:07+00:00\n"
-"PO-Revision-Date: 2015-06-10 15:26+0000\n"
+"POT-Creation-Date: 2015-07-07 16:47:13+00:00\n"
+"PO-Revision-Date: 2015-06-11 06:38+0000\n"
 "Last-Translator: Claudio Sanches <contato@claudiosmweb.com>\n"
 "Language-Team: Hebrew (Israel) (http://www.transifex.com/projects/p/woocommerce/language/he_IL/)\n"
 "MIME-Version: 1.0\n"
@@ -5060,20 +5060,20 @@ msgstr "(כולל %s)"
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
-#: includes/abstracts/abstract-wc-order.php:2136
+#: includes/abstracts/abstract-wc-order.php:2143
 msgid "Order status changed from %s to %s."
 msgstr "מצב ההזמנה שונה מהמצב %s למצב  %s"
 
-#: includes/abstracts/abstract-wc-order.php:2398
+#: includes/abstracts/abstract-wc-order.php:2405
 msgid "Item's #%s variation #%s stock reduced from %s to %s."
 msgstr "וריאציה "
 
-#: includes/abstracts/abstract-wc-order.php:2400
+#: includes/abstracts/abstract-wc-order.php:2407
 #: includes/class-wc-ajax.php:1264 includes/class-wc-ajax.php:1265
 msgid "Item #%s stock reduced from %s to %s."
 msgstr "המלאי של פריט מספר %s ירד מ%s ל %s"
 
-#: includes/abstracts/abstract-wc-order.php:2412
+#: includes/abstracts/abstract-wc-order.php:2419
 msgid "Order item stock reduced successfully."
 msgstr "כמות הפריט במלאי הופחתה בהצלחה."
 
@@ -6278,7 +6278,7 @@ msgid "Please re-enter your password."
 msgstr "אנא הזן סיסמא בשנית."
 
 #: includes/class-wc-form-handler.php:203
-#: includes/class-wc-form-handler.php:852
+#: includes/class-wc-form-handler.php:854
 msgid "Passwords do not match."
 msgstr "לא נמצאה התאמה בין הסיסמאות."
 
@@ -6351,7 +6351,7 @@ msgstr "אנא בחר במוצר שברצונך להוסיף לסל הקניות
 #: includes/class-wc-form-handler.php:766
 #: includes/class-wc-form-handler.php:770
 #: includes/class-wc-form-handler.php:779
-#: includes/class-wc-form-handler.php:908
+#: includes/class-wc-form-handler.php:910
 msgid "Error"
 msgstr "שגיאה"
 
@@ -6367,15 +6367,15 @@ msgstr "נדרשת סיסמא."
 msgid "A user could not be found with this email address."
 msgstr "לא נמצא משתמש עם כתובת אימייל זו."
 
-#: includes/class-wc-form-handler.php:804
+#: includes/class-wc-form-handler.php:806
 msgid "You are now logged in as <strong>%s</strong>"
 msgstr "אתה מחובר כרגע בתור <strong>%s</strong>"
 
-#: includes/class-wc-form-handler.php:848
+#: includes/class-wc-form-handler.php:850
 msgid "Please enter your password."
 msgstr "אנא הזן את הסיסמא שלך."
 
-#: includes/class-wc-form-handler.php:891
+#: includes/class-wc-form-handler.php:893
 msgid "Anti-spam field was filled in."
 msgstr "התחום אנטי ספאם היה מלא פנימה"
 
@@ -9911,7 +9911,7 @@ msgstr "חיפוש עבור:"
 msgid "Clear selection"
 msgstr "נקה בחירה"
 
-#: templates/single-product/add-to-cart/variable.php:93
+#: templates/single-product/add-to-cart/variable.php:96
 msgid "This product is currently out of stock and unavailable."
 msgstr "מוצר זה חסר כרגע במלאי ואינו זמין."
 

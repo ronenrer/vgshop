@@ -16,71 +16,74 @@ Template Name: Homepage
               <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
           
                 <section class="entry-content clearfix" itemprop="articleBody">
-                   <div class="intro-text"> <?php the_content(); ?></div>                    
+                   <div class="jumbotron text-center">
+                      <h2>על VG קלאסיק</h2>
+                      <div class="lead">
+                         <?php the_content(); ?>
+                      </div>
                 </section>
-                <?php echo do_Shortcode('[product_categories number="12" parent="0"]') ?>
+                <h2 class="text-center">החנות שלנו</h2>
+                <?php echo do_Shortcode('[product_categories number="4" parent="0"]') ?>
                 <!-- Three columns of text below the carousel -->
+                <hr class="featurette-divider">
                 <div class="row main-features">
                   <div class="col-md-3">
                     <div class="img-box">
                       <img class="img-circle" src="http://www.vgshop.co.il/wp-content/uploads/2012/10/circle_feature_2.jpg" alt="Generic placeholder image" width="189" height="189">
-                      <h2>איך משתמשים</h2>
+                      <h3>רכישה</h3>
                     </div>
                     <p>מקטרת האידוי (Vaporizer) המקורית עכשיו בישראל. מה זה אידוי קנאביס רפואי ולמה אתם חייבים אחת.</p>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                    <p><a class="btn btn-default" href="#" role="button">קנו עכשיו &raquo;</a></p>
                   </div><!-- /.col-lg-3 -->
                    <div class="col-md-3">
                     <div class="img-box">
                       <img class="img-circle" src="http://www.vgshop.co.il/wp-content/uploads/2012/10/circle_feature_2.jpg" alt="Generic placeholder image" width="189" height="189">
-                      <h2>איך משתמשים</h2>
+                      <h3>איך משתמשים</h3>
                     </div>
                     <p>מקטרת האידוי (Vaporizer) המקורית עכשיו בישראל. מה זה אידוי קנאביס רפואי ולמה אתם חייבים אחת.</p>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                    <p><a class="btn btn-default" href="#" role="button">למדריך המלא &raquo;</a></p>
                   </div><!-- /.col-lg-3 -->
                    <div class="col-md-3">
                     <div class="img-box">
                       <img class="img-circle" src="http://www.vgshop.co.il/wp-content/uploads/2012/10/circle_feature_2.jpg" alt="Generic placeholder image" width="189" height="189">
-                      <h2>איך משתמשים</h2>
+                      <h3>שאלות נפוצות</h3>
                     </div>
                     <p>מקטרת האידוי (Vaporizer) המקורית עכשיו בישראל. מה זה אידוי קנאביס רפואי ולמה אתם חייבים אחת.</p>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                    <p><a class="btn btn-default" href="#" role="button">לכל השאלות &raquo;</a></p>
                   </div><!-- /.col-lg-3 -->
                    <div class="col-md-3">
                     <div class="img-box">
                       <img class="img-circle" src="http://www.vgshop.co.il/wp-content/uploads/2012/10/circle_feature_2.jpg" alt="Generic placeholder image" width="189" height="189">
-                      <h2>איך משתמשים</h2>
+                      <h3>אודות היצרן האמריקאי</h3>
                     </div>
                     <p>מקטרת האידוי (Vaporizer) המקורית עכשיו בישראל. מה זה אידוי קנאביס רפואי ולמה אתם חייבים אחת.</p>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                    <p><a class="btn btn-default" href="#" role="button">המשך קריאה &raquo;</a></p>
                   </div><!-- /.col-lg-3 -->
                 </div><!-- /.row -->
 
               <!-- START THE FEATURETTES -->
 
               <hr class="featurette-divider">
-
-              <div class="row featurette">
-                <div class="col-md-7">
-                  <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-                  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+              <div class="featurettes row">
+                <div class="col-sm-6 featurette">
+                  <div class="col-sm-3">
+                    <img class="featurette-image img-responsive center-block" src="<?php echo get_stylesheet_directory_uri()?>/library/images/icon-delivery.png" alt="Generic placeholder image">
+                  </div>
+                  <div class="col-sm-9">
+                    <h3 class="featurette-heading">דמי משלוח <span class="text-muted"> ומדיניות החזרה</span></h3>
+                    <p class="lead">VGshop מספקת אחריות בישראל לכל החיים על מוצרי VaporGenie.</p>
+                  </div>                  
                 </div>
-                <div class="col-md-5">
-                  <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-                </div>
-              </div>
-
-              <hr class="featurette-divider">
-
-              <div class="row featurette">
-                <div class="col-md-7 col-md-push-5">
-                  <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-                  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                </div>
-                <div class="col-md-5 col-md-pull-5">
-                  <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+                <div class="col-sm-6 featurette">
+                  <div class="col-sm-3">
+                    <img class="featurette-image img-responsive center-block" src="<?php echo get_stylesheet_directory_uri()?>/library/images/icon-discrete.png" alt="Generic placeholder image">
+                  </div>
+                  <div class="col-sm-9">
+                    <h3 class="featurette-heading">אריזה <span class="text-muted">דיסקרטית.</span></h3>
+                    <p class="lead">המוצר יגיע אל ביתך ארוז בצורה דיסקרטית וללא רמז על זהות המוצר.</p>
+                  </div>
                 </div>
               </div>
-
             <!-- /END THE FEATURETTES -->
 
            </article>

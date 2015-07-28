@@ -11,10 +11,12 @@ get_header(); ?>
 				if (!empty($header_bg)) {
 					$header_style = 'style="background-image:url('.$header_bg.');"';
 				}?>
-				<header class="article-header fullwidth" <?php echo $header_style ?>>
-					<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+				<header class="article-header" <?php echo $header_style ?>>
+					<h1 class="page-title container" itemprop="headline"><?php the_title(); ?></h1>
 				</header>
-				<div id="inner-content" class="wrap clearfix">
+				<div id="inner-content" class="container clearfix">
+						
+						<div id="main" class="" role="main">
 						
 						<div id="main" role="main">
 
@@ -38,31 +40,7 @@ get_header(); ?>
 											<li>דלי המים הענק באותו מתחם מתרוקן לצהלות הילדים בכל <strong>4 דקות</strong>.</li>
 										</ol>
 									<?php endif;?>
-									<?php 
-									if( have_rows('faq') ):
-										echo ' <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">';
-										$i=1;
-										while( have_rows('faq') ): the_row(); 
-											$quest =  get_sub_field('quest') ;	
-											$answer =  get_sub_field('answer');?>
-											<div class="panel panel-default">
-									   			 <div class="panel-heading" role="tab" id="headingOne">
-									  			    <h4 class="panel-title">
-									      			  <a data-toggle="collapse" data-parent="#accordion" href="#collapse-<?php echo $i; ?>" aria-expanded="true" aria-controls="collapseOne">
-									   			       <?php echo $quest?>
-									       			 </a>
-									    			</h4>
-									  			  </div>
-									 			   <div id="collapse-<?php echo $i; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-<?php echo $i; ?>">
-												      <div class="panel-body">
-												      	 <?php echo $answer?>
-												      </div>
-												    </div>
-									 			</div>													
-										<?php  $i++; endwhile;
-										echo '</div>';	
-									endif;
-									 ?>
+									
 							</section>
 
 							</article>

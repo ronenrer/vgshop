@@ -1018,6 +1018,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/library\/ie-only.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/ie-only.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/library\/images\/banner_no_price.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1106,6 +1115,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/library\/images\/icon-delivery.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2777,
+		"inputAbbreviatedPath": "\/library\/images\/icon-delivery.png",
+		"outputAbbreviatedPath": "\/library\/images\/icon-delivery.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/icon-discrete.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4855,
+		"inputAbbreviatedPath": "\/library\/images\/icon-discrete.png",
+		"outputAbbreviatedPath": "\/library\/images\/icon-discrete.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/library\/images\/logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1113,6 +1144,17 @@
 		"initialSize": 11228,
 		"inputAbbreviatedPath": "\/library\/images\/logo.png",
 		"outputAbbreviatedPath": "\/library\/images\/logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/overlay.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/library\/images\/overlay.png",
+		"outputAbbreviatedPath": "\/library\/images\/overlay.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1135,6 +1177,17 @@
 		"initialSize": 121648,
 		"inputAbbreviatedPath": "\/library\/images\/slide1.png",
 		"outputAbbreviatedPath": "\/library\/images\/slide1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/slide2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 98687,
+		"inputAbbreviatedPath": "\/library\/images\/slide2.png",
+		"outputAbbreviatedPath": "\/library\/images\/slide2.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1427,6 +1480,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/woocommerce\/checkout\/form-checkout.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/woocommerce\/checkout\/form-checkout.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/wp_bootstrap_navwalker.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1439,7 +1501,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "admin",
+"lastSavedByUser": "Ronenrer",
 "manualImportLinks": {
 	},
 "projectAttributes": {
