@@ -18,46 +18,49 @@ Template Name: Homepage
                 <section class="entry-content clearfix" itemprop="articleBody">
                    <div class="jumbotron text-center">
                       <h2>על VG קלאסיק</h2>
+                      <hr>
                       <div class="lead">
                          <?php the_content(); ?>
                       </div>
+                    </div>
                 </section>
                 <h2 class="text-center">החנות שלנו</h2>
+                <hr>
                 <?php echo do_Shortcode('[product_categories number="4" parent="0"]') ?>
                 <!-- Three columns of text below the carousel -->
                 <hr class="featurette-divider">
                 <div class="row main-features">
                   <div class="col-md-3">
                     <div class="img-box">
-                      <img class="img-circle" src="http://www.vgshop.co.il/wp-content/uploads/2012/10/circle_feature_2.jpg" alt="Generic placeholder image" width="189" height="189">
-                      <h3>רכישה</h3>
+                      <img class="img-circle" src="http://www.vgshop.co.il/wp-content/uploads/2013/03/BW_pipe.jpg" alt="Generic placeholder image" width="189" height="189">
+                      <h3 class="ribbon">רכישה</h3>
                     </div>
                     <p>מקטרת האידוי (Vaporizer) המקורית עכשיו בישראל. מה זה אידוי קנאביס רפואי ולמה אתם חייבים אחת.</p>
-                    <p><a class="btn btn-default" href="#" role="button">קנו עכשיו &raquo;</a></p>
+                    <p><a href="#" role="button">קנו עכשיו <span class="glyphicon glyphicon-chevron-left"></span></a></p>
                   </div><!-- /.col-lg-3 -->
                    <div class="col-md-3">
                     <div class="img-box">
                       <img class="img-circle" src="http://www.vgshop.co.il/wp-content/uploads/2012/10/circle_feature_2.jpg" alt="Generic placeholder image" width="189" height="189">
-                      <h3>איך משתמשים</h3>
+                      <h3 class="ribbon">איך משתמשים</h3>
                     </div>
                     <p>מקטרת האידוי (Vaporizer) המקורית עכשיו בישראל. מה זה אידוי קנאביס רפואי ולמה אתם חייבים אחת.</p>
-                    <p><a class="btn btn-default" href="#" role="button">למדריך המלא &raquo;</a></p>
+                    <p><a href="#" role="button">למדריך המלא <span class="glyphicon glyphicon-chevron-left"></span></a></p>
                   </div><!-- /.col-lg-3 -->
                    <div class="col-md-3">
                     <div class="img-box">
-                      <img class="img-circle" src="http://www.vgshop.co.il/wp-content/uploads/2012/10/circle_feature_2.jpg" alt="Generic placeholder image" width="189" height="189">
-                      <h3>שאלות נפוצות</h3>
+                      <img class="img-circle" src="http://www.vgshop.co.il/wp-content/uploads/2012/10/circle_feature_3.jpg" alt="Generic placeholder image" width="189" height="189">
+                     <h3 class="ribbon">שאלות ותשובות</h3>
                     </div>
                     <p>מקטרת האידוי (Vaporizer) המקורית עכשיו בישראל. מה זה אידוי קנאביס רפואי ולמה אתם חייבים אחת.</p>
-                    <p><a class="btn btn-default" href="#" role="button">לכל השאלות &raquo;</a></p>
+                    <p><a href="#" role="button">לכל השאלות <span class="glyphicon glyphicon-chevron-left"></span></a></p>
                   </div><!-- /.col-lg-3 -->
                    <div class="col-md-3">
                     <div class="img-box">
-                      <img class="img-circle" src="http://www.vgshop.co.il/wp-content/uploads/2012/10/circle_feature_2.jpg" alt="Generic placeholder image" width="189" height="189">
-                      <h3>אודות היצרן האמריקאי</h3>
+                      <img class="img-circle" src="http://www.vgshop.co.il/wp-content/uploads/2012/10/circle_feature_4.jpg" alt="Generic placeholder image" width="189" height="189">
+                     <h3 class="ribbon">אודות היצרן האמריקאי</h3>
                     </div>
                     <p>מקטרת האידוי (Vaporizer) המקורית עכשיו בישראל. מה זה אידוי קנאביס רפואי ולמה אתם חייבים אחת.</p>
-                    <p><a class="btn btn-default" href="#" role="button">המשך קריאה &raquo;</a></p>
+                    <p><a href="#" role="button">המשך קריאה <span class="glyphicon glyphicon-chevron-left"></span></a></p>
                   </div><!-- /.col-lg-3 -->
                 </div><!-- /.row -->
 
@@ -71,7 +74,7 @@ Template Name: Homepage
                   </div>
                   <div class="col-sm-9">
                     <h3 class="featurette-heading">דמי משלוח <span class="text-muted"> ומדיניות החזרה</span></h3>
-                    <p class="lead">VGshop מספקת אחריות בישראל לכל החיים על מוצרי VaporGenie.</p>
+                    <p class="lead">VGshop מספקת אחריות בישראל לכל החיים על מוצרי VaporGenie... <a href="#" role="button"><span class="glyphicon glyphicon-chevron-left"></span></a></p>
                   </div>                  
                 </div>
                 <div class="col-sm-6 featurette">

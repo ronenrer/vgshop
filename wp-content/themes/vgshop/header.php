@@ -49,6 +49,9 @@
 				  fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));
 			</script>
+      <?php 
+        $logo = get_field('site_logo',option);
+      ?>
 		<div class="navbar-wrapper">
       <div class="container">
         <nav class="navbar  navbar-static-top">
@@ -60,7 +63,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#"><img src="<?php echo get_stylesheet_directory_uri()?>/library/images/logo.png"/></a>
+              <a class="navbar-brand" href="<?php echo home_url()?>"><img src="<?php echo $logo['url']?>"/></a>
             </div>
              <?php bones_main_nav();?>
           </div>
@@ -75,25 +78,38 @@
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <div class="container">
-            <div class="imag-container col-sm-6">
+            <div class="image-container col-sm-6">
                <img class="first-slide" src="<?php echo get_stylesheet_directory_uri()?>/library/images/slide1.png" alt="First slide">
             </div>
             <div class="carousel-caption col-sm-6">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+             <h1>VG  Classic</h1>
+              <p>צריכה בריאה, יותר חסכונית ונטולת ריח</p>
+              <p>לשאוף את הטוב ביותר</p>
+              <h3><span>290 ש״ח</span> בלבד!</h3>
+              <ul>
+                 <li><span class="glyphicon glyphicon-ok"></span> משלוח חינם, אריזה דיסקרטית</li>
+                <li><span class="glyphicon glyphicon-ok"></span> המוצר מיוצר בארה"ב</li>
+                <li><span class="glyphicon glyphicon-ok"></span> התשלום באמצעות שירות פייפאל מאובטח</li>
+              </ul>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">לרכישה</a></p>
             </div>
           </div>
         </div>
         <div class="item">
           <div class="container">
-            <div class="imag-container col-sm-6">
+            <div class="image-container col-sm-6">
                <img class="second-slide" src="<?php echo get_stylesheet_directory_uri()?>/library/images/slide2.png" alt="First slide">
             </div>
             <div class="carousel-caption  col-sm-6">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              <h1>מקטרת אידוי אלומיניום</h1>
+              <p>קטנה, עמידה ונכנסת לכל כיס</p>
+              <h3><span>220 ש״ח</span> בלבד!</h3>
+              <ul>
+                 <li>משלוח חינם, אריזה דיסקרטית</li>
+                <li>המוצר מיוצר בארה"ב</li>
+                <li>התשלום באמצעות שירות פייפאל מאובטח</li>
+              </ul>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">לרכישה</a></p>
             </div>
           </div>
         </div>
@@ -104,10 +120,11 @@
                 <iframe width="853" height="480" src="https://www.youtube.com/embed/-ofA0DpAZQY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
-            <div class="carousel-caption sm-6">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            <div class="carousel-caption col-sm-6">
+              <h1>ה- VG Classic</h1>
+              <p>קלה ונוחה לשימוש, נכנסת לכיס<br/>
+                ואפשר לקחת אותה לכל מקום...</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">קראו עוד</a></p>
             </div>
           </div>
         </div>

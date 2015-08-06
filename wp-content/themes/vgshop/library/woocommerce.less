@@ -11,6 +11,7 @@ Stylesheet: Woocommerce Stylesheet
 /*********************
         SHOP
 *********************/
+.woocommerce .content{background-color:#fff;}
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
 
 	h3{
@@ -66,6 +67,7 @@ Stylesheet: Woocommerce Stylesheet
 .summary iframe{max-width:100%;}
 
 .woocommerce ul.products li.product:not(.product-category), .woocommerce-page ul.products li.product:not(.product-category){
+	border-bottom:1px solid @brand-primary;
 	@media (min-width: 768px){
 		float: right;
 		margin: 0 0  2.992em 3.8%;
@@ -85,8 +87,9 @@ Stylesheet: Woocommerce Stylesheet
 	box-shadow: 0 2px rgba(0, 0, 0, 0.1);
 	h3{
 		padding:0.5em;
-		background-color:@brand-accent;
+		background-color:@brand-primary;
   		color: #FFF;
+  		text-align: center;
 	}
 	mark{background:none;color:#fff;}	
 }
@@ -125,4 +128,25 @@ Stylesheet: Woocommerce Stylesheet
 		margin: 0 0  2.992em 3.8%;
 		width: 30.8%;
 	}
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs{
+	&:before{border:0;} 
+	
+	li{
+		border-width:0 0 3px 0;
+		padding:0;
+		margin:0;
+		&.active{border-bottom-color:@gray}
+	}
+}
+.woocommerce .widget_shopping_cart .cart_list li, .woocommerce.widget_shopping_cart .cart_list li{
+	padding-right:2em;
+	padding-left:0;
+	a.remove{
+		right:0 ;
+		left:auto;
+	}
+}
+.woocommerce.widget_shopping_cart{
+	.buttons{margin-bottom:0}
 }

@@ -58,7 +58,11 @@
   	.col-sm-7, .col-sm-8, .col-sm-9,.navbar-header,.navbar-brand{
   		float: right;
   	}
-  	.alignleft{float:left;margin:0 20px 20px 0}
+  	.col-sm-push-3 {
+    	right: 25%;
+    	left:auto;
+    }
+    .alignleft{float:left;margin:0 20px 20px 0}
   	.alignright{float:right;margin:0 0 20px 20px}
  }
  @media (min-width: @screen-md){
@@ -71,7 +75,7 @@
 .row.nomargin{margin:0;}
 
 body{
-	background:#f5f5f5;
+	background:#f9f9f9;
 	font-family:@font-family-sans-serif;
 }
 .navbar-wrapper{
@@ -106,10 +110,11 @@ body{
 .navbar>.container {
 	.navbar-brand{
 		@media (min-width: @grid-float-breakpoint){
-		padding:10px 0;
+		padding:5px 0 0;
 		}
 	}
 }
+
 .navbar-nav > li{
 	@media (min-width: @grid-float-breakpoint){
 		float:right !important;
@@ -119,18 +124,20 @@ body{
 	 	font-family:@font-family-sans-serif;
 	&:hover,&:focus{background:none;color:@brand-accent;}
 	}
+	&.current-menu-item a{color:@brand-accent;}
 }
-
+.nav>li>a:focus, .nav>li>a:hover{background:none}
 .fullwidth{
 	margin:0 -15px;
 	img{max-width:100%;}
 }
+
 .carousel{
 	height: 350px;
  	margin-bottom: 60px;
  	&#myCarousel{
  		margin-bottom: 0;
- 		background:@brand-dark url('../images/overlay.png') no-repeat center top;
+ 		background:@brand-primary url('../images/overlay.png') no-repeat 85% top;
  		.carousel-inner{
  			overflow-y: visible;
 	 		>.item{
@@ -138,19 +145,55 @@ body{
 			}
  		}
  		.container{position: relative;height:100%;padding:20px 0}
- 		.carousel-caption{position:static;text-shadow:none;padding-top:0;}
+ 		.carousel-caption{
+ 			position:static;
+ 			text-shadow:none;
+ 			text-align: right;
+ 			padding:0 20px 0 0;
+ 			h1{color:@brand-accent;margin-top:10px;}
+ 			h3{
+ 				font-size:40px;
+ 				color:#fff;
+ 				span {color:@brand-dark;}
+ 			}
+ 			p{font-size:30px;}
+ 			ul{
+ 				position: absolute;
+			    left: 0;
+			    bottom: 120px;
+			    list-style:none;
+			    border: 1px dashed @brand-dark;
+			    border-width:1px 0 1px 0;
+			    color:@brand-dark;
+			    font-size:15px;
+			    padding: 15px 0;
+ 			}
+ 			.btn{margin-top:15px;}
+ 		}
  		.carousel-control{
+ 			visibility: hidden;
  			height:360px;
  			&.right,&.left{background: none}
+ 		}
+ 		&:hover{
+ 			.carousel-control{
+ 				visibility: visible;
+ 			}
  		}
  	}
 }
 
 img{max-width:100%;height:auto;}
-#inner-content{padding:40px 0;}
+#inner-content{
+	padding-top:40px;
+	padding-bottom:40px;
+}
 #main{
 	@media (min-width: @grid-float-breakpoint){
 		&.col-sm-9{padding-left:8%;}
+		&.col-sm-push-3{
+			padding-left:0;
+		}
 	}
 }
 .main-features{
@@ -160,22 +203,42 @@ img{max-width:100%;height:auto;}
 			position:relative;
 			width:216px;
 			text-align:center;
+			margin-bottom: 20px;
 			img{
 				border: 1px solid #AAA;
   				padding: 4px;
 				}			
 			}
+
+
 		h3{
+			font-size: 19px !important;
 			position:absolute;
 			width:100%;
 			top:50%;
-			.translate(0,-50%);
-			width:216px;
-			height:35px;
+			left:50%;
+			.translate(-50%,-50%);
+			width:80%;
+			height:36px;
+			background:rgba(233, 75, 44, 0.85);;
 			line-height:37px;
-			background: url('../images/homeBox_ribbon.png') no-repeat;
 			color:#fff;
 			margin:0;
+			&:before, &:after {
+			 content: "";
+			 position: absolute;
+			 display: block;
+			 border: 18px solid rgba(233, 75, 44, 0.85);
+			 top:0;
+			}
+			&:before {
+			 left: -36px;
+			 border-left-color: transparent;
+			}
+			&:after {
+			 right: -35px;
+			 border-right-color: transparent;
+			}
 
 		}
 		 a.view{
@@ -200,6 +263,9 @@ img{max-width:100%;height:auto;}
 	.widget{
 		margin-bottom:40px;
 	}
+	.widgettitle{
+		color:@brand-dark;
+	}
 }
 
 /*******************
@@ -212,24 +278,29 @@ FOOTER
 		padding:20px;
 		#text-2 {
 		.textwidget{line-height:1.8em;}	
-	}
-	a{color:@brand-light;}
-	h3 span{color:@brand-accent-light}
-	.social{
-		a{
-			background:rgba(0,0,0,0.7);
-			padding:5px;
-			display:inline-block;
-			border-radius:5px;
-			width:32px;
-			height:32px;
-			line-height:26px;
-			margin-top:20px;
-			font-size:26px;
-			text-align: center;			
 		}
-	}
-	.widgettitle{font-weight:700;margin-bottom:15px;}
+		a{
+			color:@brand-dark;
+			&:hover{color:@brand-accent}
+		}
+		.social{
+			a{
+				background:rgba(0,0,0,0.7);
+				padding:5px;
+				display:inline-block;
+				border-radius:5px;
+				width:32px;
+				height:32px;
+				line-height:26px;
+				margin-top:20px;
+				font-size:26px;
+				text-align: center;			
+			}
+		}
+		.widgettitle{
+			margin-bottom:15px;
+			.text-muted{color:@brand-accent}
+		}
 	}
 
 	ul.nav{
@@ -246,11 +317,10 @@ FOOTER
 }
 
 .bottom-footer{
-	background:darken(@brand-primary,10%);
+	background:@brand-primary;
 	background-size: cover;
 	font-size:@font-size-small;
 	color:#fff;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
 	margin-top:20px;
 	line-height:40px;
 	p{margin-bottom:0;}
@@ -261,7 +331,6 @@ FOOTER
 /*******************
 HOMEPAGE
 ********************/
-.home #inner-content{padding-top:0;}
 .home .jumbotron{
 	width:75%;
 	margin: 0 auto 40px;
@@ -269,7 +338,7 @@ HOMEPAGE
 .featurette-divider{margin-bottom:40px;}
 .featurette-heading{
 	margin-top:0;margin-bottom:5px;
-	.text-muted{color:@brand-accent}
+	color: @brand-accent;
 }
 .featurette .lead{margin-bottom:0}
 @media (min-width: @grid-float-breakpoint){
@@ -278,8 +347,13 @@ HOMEPAGE
 /*******************
 Pages
 ********************/
+#main{
+	.page-title{
+		font-size:32px;
+		margin-top:0;
+	}
+}
 .entry-content{
-	h2,h3{color:@brand-primary;}
 	h2{
 		font-size:@font-size-h2;
 		margin-bottom:20px;
@@ -287,20 +361,13 @@ Pages
 	} 
 .article-header{
 	height:170px;
-	background: url('../images/home_slider_bg.jpg') repeat-x center top;
+	background:@brand-primary url('../images/overlay.png') no-repeat 85% top;
 	position:relative;
-	&:before{
-		content:'';
-		position: absolute;
-		right:0;
-		width:100%;
-		height:100%;
-		background: rgba(0,0,0,0.2);
-	}
+
 	.page-title{
 		position:absolute;
 		font-size:@font-size-h1;
-		color:#fff;
+		color:@brand-dark;
 		top:50%;
 		right:10px;
 		left:0;
@@ -315,18 +382,22 @@ ACCORDION
 
 .panel-group .panel{
 	margin-bottom:10px;
-	border-color:@brand-light;
+	border-color:@gray-lighter;
+	border-width:0 0 1px 0;
+	border-radius:0;
+
 		> .panel-heading{
 			padding:2px;
 			background:#fff;
+			border-radius:0;
+
 			a{
 				display:block;
 				padding:10px 15px;
-				color:#fff;
-				background:@brand-light;
+				color:@brand-primary;
 				border:0;
-				border-radius:3px;
-				text-decoration:none;
+				border-radius:0;
+				text-decoration:none !important;
 				&:after{
 					content:'+';
 					float:left;
@@ -338,26 +409,47 @@ ACCORDION
 			border-top:0;
 		}
 		&.active{
-				border-color:@brand-accent;
 			a{
-				background:@brand-accent;
 				&:after{content:'-'}
 			}
 		}
 	}
 body.rtl .gform_wrapper{
-		.gfield{
-			margin-bottom:15px;
-			&.col-sm-4{clear:none !important;}
-			input,textarea{
-				border:1px solid darken(@gray-lighter,5%);
-				&:focus{border-color:@brand-light;}
-			}
-		}
-		.gform_footer{text-align:center !important;}
-		.gform_button{
-			float:none !important;
-			font-size:24px;
-			&:focus{outline:0;}
+	.gfield{
+		margin-bottom:15px;
+		&.col-sm-4{clear:none !important;}
+		input,textarea{
+			border:1px solid darken(@gray-lighter,5%);
+			&:focus{border-color:@brand-light;}
 		}
 	}
+	.gform_footer{text-align:center !important;}
+	.gform_button{
+		float:none !important;
+		font-size:24px;
+		&:focus{outline:0;}
+	}
+}
+.woocommerce #main .page-title{
+	@media (min-width: @grid-float-breakpoint){
+	width:50%;
+}
+	float:right;
+}
+body:not(.home) .woocommerce .products{
+	border-top:1px solid @gray-lighter;
+	padding-top:30px !important;
+}
+#sidebar-shop{
+	@media (min-width: @grid-float-breakpoint){
+		padding-left:3%;
+	}
+	.product-categories{
+		padding-right:0;
+		list-style: none;
+	}
+	.widgettitle{
+		border-bottom:1px solid @gray;
+	}
+	.widget:first-child .widgettitle{margin-top:0}
+} 

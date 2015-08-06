@@ -96,6 +96,15 @@ function bones_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
+	register_sidebar(array(
+		'id' => 'sidebar-shop',
+		'name' => __( 'Shop Pages Sidebar', 'bonestheme' ),
+		'description' => __( 'Shop Pages Sidebar.', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
 
 } // don't remove this bracket!
 
@@ -195,5 +204,23 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
+add_filter( 'woocommerce_show_page_title' , 'woo_hide_page_title' );
 
+/**
+ * woo_hide_page_title
+ *
+ * Removes the "shop" title on the main shop page
+ *
+ * @access      public
+ * @since       1.0 
+ * @return      void
+*/
+function woo_hide_page_title() {
+	if(is_shop()){
+	return false;	
+	}
+	else if ( is_product_category() ) {	
+		return true;
+	}
+}
 ?>

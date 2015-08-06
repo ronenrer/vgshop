@@ -7,13 +7,13 @@
 				</header>
 				<div id="inner-content" class="container clearfix">
 
-						<div id="main" class="col-sm-9 clearfix" role="main">
+						<div id="main" class="col-sm-9 col-sm-push-3 clearfix" role="main">
 
 							<?php woocommerce_content(); ?>
 
 						</div>
 
-						<?php get_sidebar(); ?>
+						<?php get_sidebar('shop'); ?>
 
 				</div>
 
